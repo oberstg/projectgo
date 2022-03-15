@@ -26,7 +26,7 @@ body {
     grid-area: nav;
     display: block;
     flex-direction: row;
-    background-color: #20465c;
+    background-image: linear-gradient(to left, #0540fa, #05faad);
 }
 
 .navegador > .containerLinks > li {
@@ -37,15 +37,27 @@ body {
 a:link,
 a:visited,
 a:focus,
-a:hover,
 a:active {
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: "Times New Roman", Times, serif;
     font-size: 2rem;
     text-decoration: none;
     padding: 5px;
 }
 
+.navegador > .containerLinks > li > a:hover {
+    animation-duration: 5s;
+    animation-name: seleccionado;
+    animation-iteration-count: infinite;
+}
+
+@keyframes seleccionado {
+    0% {
+        border: 1px solid rgb(143, 140, 110);
+        background-color: gray;
+        border-radius: 5%;
+    }
+}
 .containerLinks {
     display: flex;
     flex: 1;
@@ -126,7 +138,7 @@ a:active {
     grid-area: pie;
     display: block;
     flex-direction: row;
-    background-color: #20465c;
+    background-image: linear-gradient(to left, #0540fa, #05faad);
 }
 
 .containerRedes {
@@ -159,7 +171,7 @@ a:active {
         grid-area: nav;
         display: flex;
         flex-direction: row;
-        background-color: #20465c;
+        background-image: linear-gradient(to left, #0540fa, #05faad);
     }
     .containerLinks {
         display: flex;
@@ -176,7 +188,7 @@ a:active {
         grid-area: pie;
         display: flex;
         flex-direction: row;
-        background-color: #20465c;
+        background-image: linear-gradient(to left, #0540fa, #05faad);
     }
 
     .containerRedes {
@@ -222,8 +234,13 @@ a:active {
     border-radius: 2%;
     background-color: white;
     margin: 10px;
+    transition: all 1s;
 }
 
+.item:hover {
+    transform: scale(1.2, 1.2);
+    margin: 50px;
+}
 .prodTit {
     font-size: 2rem;
     text-align: center;
