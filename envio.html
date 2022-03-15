@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanqui Hogar - Tienda online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navegador">
+        <div class="containerLogo">
+            <a href="index.html" class="logo">
+                <img src="img/LOGO.png" alt="Logo de Blanqui Hogar">
+            </a>
+        </div>
+        <div class="containerLinks">
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="catalogo.html">Catálogo</a>
+            </li>
+            <li>
+                <a href="envio.html">Cotización de envío</a>
+            </li>
+            <li>
+                <a href="revendedores.html">Ser revendedor</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+        </div>
+    </header>
+
+    <section class="envioCuerpo">
+        <div class="envioFormulario">
+            <h3>Solicita la cotización de tu envío</h3>
+            <form action="envio.php" method="post">
+                <fieldset>
+                    <legend>Monto de tu pedido</legend>
+                    <label for="inferior">Inferior a 10000$</label>
+                    <input type="radio" name="monto" value="inferior" id="inferior">
+                    <br>
+                    <label for="superior">Superior a 10000$</label>
+                    <input type="radio" name="monto" value="superior" id="superior">
+                </fieldset>
+                <fieldset>
+                    <legend>Localidad de destino</legend>
+                    <label for="buenosaires">Buenos Aires</label>
+                    <input type="radio" name="localidad" value="buenosaires" id="buenosaires">
+                    <br>
+                    <label for="resto">Resto del país</label>
+                    <input type="radio" name="localidad" value="resto" id="resto">
+                </fieldset>
+                <fieldset>
+                    <legend>Tipo de envío</legend>
+                    <label for="rapido">Envío rápido</label>
+                    <input type="radio" name="tipo" value="rapido" id="rapido">
+                    <br>
+                    <label for="normal">Envío con normalidad</label>
+                    <input type="radio" name="tipo" value="normal" id="normal">
+                </fieldset>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Cancelar">
+            </form>
+        </div>
+    </section>
+
+
+ 
+    <footer class="pie">
+        <div class="containerLogo">
+            <a href="index.html">
+                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
+            </a>
+        </div>
+        <div class="containerRedes">
+            <a href="https://whatsapp.com" class="pieWsp">
+                <img src="./img/whatsapp.ico" alt="Icono whatsapp">
+            </a>
+            <a href="https://facebook.com" class="pieFb">
+                <img src="./img/facebook.ico" alt="Icono facebook">
+            </a>
+            <a href="https://twitter.com" class="pieTw">
+                <img src="./img/twitter.ico" alt="Icono twitter">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

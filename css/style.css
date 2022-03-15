@@ -1,0 +1,428 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    font-size: 63.5%;
+}
+
+body {
+    background-color: #96d0f2;
+}
+
+.grid {
+    display: grid;
+}
+
+.template-areas {
+    grid-template-rows: repeat (5, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nav nav nav" "carrousel carrousel carrousel" "nosotros nosotros nosotros" "ubicacion ubicacion ubicacion" "pie pie pie";
+}
+
+.navegador {
+    grid-area: nav;
+    display: block;
+    flex-direction: row;
+    background-color: #20465c;
+}
+
+.navegador > .containerLinks > li {
+    list-style: none;
+    padding-right: 2rem;
+}
+
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.containerLinks {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerLogo {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.carrousel {
+    grid-area: carrousel;
+    display: flex;
+}
+
+.carrouselHijo {
+    display: flex;
+    flex: 1;
+    position: relative;
+    padding-bottom: 40.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.carrouselHijo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nosotros {
+    grid-area: nosotros;
+    border: solid 10px #20465c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros > p {
+    font-size: 2rem;
+    padding: 5px;
+}
+
+.nosotros > h1 {
+    font-size: 3rem;
+}
+
+.ubicacion {
+    grid-area: ubicacion;
+    border: #20465c solid 10px;
+}
+
+.ubicacion > h2 {
+    position: relative;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.containerMapa {
+    position: relative;
+    padding-bottom: 100.25%;
+    height: 0;
+    overflow: hidden;
+}
+.containerMapa iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pie {
+    grid-area: pie;
+    display: block;
+    flex-direction: row;
+    background-color: #20465c;
+}
+
+.containerRedes {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 768px) {
+    .grid {
+        display: grid;
+    }
+    .template-areas {
+        grid-template-rows: repeat (5, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "nav nav nav" "ubicacion ubicacion ubicacion" "nosotros nosotros nosotros" "carrousel carrousel carrousel" "pie pie pie";
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .grid {
+        display: grid;
+    }
+    .template-areas {
+        grid-template-rows: repeat (4, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "nav nav nav" "carrousel carrousel carrousel" "nosotros nosotros ubicacion" "pie pie pie";
+    }
+    .navegador {
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        background-color: #20465c;
+    }
+    .containerLinks {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .containerLogo {
+        display: flex;
+        flex: 0.1;
+        justify-content: flex-start;
+    }
+    .pie {
+        grid-area: pie;
+        display: flex;
+        flex-direction: row;
+        background-color: #20465c;
+    }
+
+    .containerRedes {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+/* CSS para Header, Footer e Index*/
+
+.gridCat {
+    display: grid;
+}
+
+.template-areas-cat {
+    grid-template-rows: repeat (3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nav nav nav" "catalogo catalogo catalogo" "pie pie pie";
+}
+
+.navegador {
+    grid-area: nav;
+}
+
+.catalogo {
+    grid-area: catalogo;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.item {
+    border: gray 2px solid;
+    border-radius: 2%;
+    background-color: white;
+    margin: 10px;
+}
+
+.prodTit {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.prodImg{
+    padding: 10px;
+}
+
+.precio{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+
+}
+
+.prodComp{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+width: 100%;
+height: 30px;
+}
+.pie {
+    grid-area: pie;
+}
+
+@media only screen and (min-width: 1024px) {
+    .item {
+        border: gray 2px solid;
+        border-radius: 2%;
+        background-color: white;
+        margin: 40px;
+    }
+
+/* CSS para Catálogo*/
+
+.revendedorCuerpo {
+    position: relative;
+    top: 100px;
+}
+
+.revendedorCuerpo > h3 {
+    font-size: 3rem;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.revendedorCuerpo > p {
+    font-size: 2rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.revendedorCuerpo > form {
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+.revendedorCuerpo > form > input {
+    width: 100%;
+    height: 2em;
+    margin: 1px;
+    padding: 5px;
+}
+
+.revendedorCuerpo > form > legend {
+    font-size: 2rem;
+    font-family: "Times New Roman", Times, serif;
+    margin: 1px;
+    padding: 2px;
+}
+
+.revendedorCuerpo > form > input[type="submit"],
+.revendedorCuerpo > form > input[type="reset"] {
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 16px 30px 20px 30px;
+    margin: 50px 20px;
+    width: auto;
+    position: relative;
+    left: 30%;
+}
+
+.footerRevendedores {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+/* CSS para revendedores*/
+.envioFormulario {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    top: 150px;
+}
+
+.envioCuerpo > .envioFormulario > h3 {
+    font-size: 2rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.envioFormulario > form > fieldset > * {
+    font-size: 2rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.envioFormulario > form > fieldset > legend {
+    font-weight: bold;
+}
+
+.envioFormulario > form > input[type="reset"],
+.envioFormulario > form > input[type="submit"] {
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 16px 30px 20px 30px;
+    margin: 50px 20px;
+    width: auto;
+    position: relative;
+    left: 30%;
+}
+
+.footerEnvio {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+/*CSS para envio*/
+
+.contactoFormulario {
+    width: 50%;
+    left: 25%;
+    position: relative;
+    top: 50px;
+}
+
+.contactoCuerpo > .contactoFormulario > h3 {
+    font-size: 3rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contactoCuerpo > .contactoFormulario > p {
+    font-size: 2rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contactoFormulario > form > * {
+    font-size: 2rem;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+    text-decoration: none;
+    margin: 5px;
+    width: 100%;
+}
+
+.contactoFormulario > form > legend {
+    font-weight: bold;
+}
+
+.contactoFormulario > form > input[type="reset"],
+.contactoFormulario > form > input[type="submit"] {
+    background-color: #04aa6d;
+    border: none;
+    color: white;
+    padding: 16px 30px 20px 30px;
+    margin: 50px 20px;
+    width: auto;
+    position: relative;
+    left: 30%;
+}
+
+.footerContacto {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+}
+
+/*CSS para Contacto*/

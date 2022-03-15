@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanqui Hogar - Tienda online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navegador">
+        <div class="containerLogo">
+            <a href="index.html" class="logo">
+                <img src="img/LOGO.png" alt="Logo de Blanqui Hogar">
+            </a>
+        </div>
+        <div class="containerLinks">
+            <li>
+                <a href="index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="catalogo.html">Catálogo</a>
+            </li>
+            <li>
+                <a href="envio.html">Cotización de envío</a>
+            </li>
+            <li>
+                <a href="revendedores.html">Ser revendedor</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+        </div>
+    </header>
+
+
+    <section class="revendedorCuerpo">
+        <h3>¿Querés ser parte del equipo de trabajo de Blanqui Hogar?</h3>
+        <p>Para ser revendedor de nuestra empresa, es necesario que nos brindes los siguientes datos. Nos
+            comunicaremos con usted a la brevedad.</p>
+        <form action="envio.php" method="post">
+            <br>
+            <legend>Sobre usted</legend>
+            <input type="text" placeholder="Nombre y apellido">
+            <legend>Teléfono de contacto</legend>
+            <input type="tel" placeholder="Teléfono">
+            <legend>Introduzca su correo</legend>
+            <input type="email" placeholder="Correo electrónico">
+            <legend>Lugar de residencia</legend>
+             <input type="text" placeholder="Barrio o localidad">
+            <legend>Seleccione debajo su provincia</legend>
+            <!-- Agradecimientos al usuario jrodrigopuca, extraído de github. Lo use para ahorrar tiempo-->
+            <select id="provincia">
+                <option value="1">BUENOS AIRES</option>
+                <option value="2">CATAMARCA</option>
+                <option value="5">CHACO</option>
+                <option value="6">CHUBUT</option>
+                <option value="50">CIUDAD AUTONOMA DE Bs As</option>
+                <option value="3">CORDOBA</option>
+                <option value="4">CORRIENTES</option>
+                <option value="7">ENTRE RIOS</option>
+                <option value="8">FORMOSA</option>
+                <option value="9">JUJUY</option>
+                <option value="10">LA PAMPA</option>
+                <option value="11">LA RIOJA</option>
+                <option value="12">MENDOZA</option>
+                <option value="13">MISIONES</option>
+                <option value="14">NEUQUEN</option>
+                <option value="15">RIO NEGRO</option>
+                <option value="16">SALTA</option>
+                <option value="17">SAN LUIS</option>
+                <option value="19">SANTA CRUZ</option>
+                <option value="20">SANTA FE</option>
+                <option value="21">SANTIAGO DEL ESTERO</option>
+                <option value="22">TIERRA DEL FUEGO</option>
+            </select>
+            </fieldset>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+        </form>
+    </section>
+
+    <footer class="pie">
+        <div class="containerLogo">
+            <a href="index.html">
+                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
+            </a>
+        </div>
+        <div class="containerRedes">
+            <a href="https://whatsapp.com" class="pieWsp">
+                <img src="./img/whatsapp.ico" alt="Icono whatsapp">
+            </a>
+            <a href="https://facebook.com" class="pieFb">
+                <img src="./img/facebook.ico" alt="Icono facebook">
+            </a>
+            <a href="https://twitter.com" class="pieTw">
+                <img src="./img/twitter.ico" alt="Icono twitter">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
