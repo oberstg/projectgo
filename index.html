@@ -6,36 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanqui Hogar - Tienda online</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="grid template-areas">
 
-    <header class="navegador">
-        <div class="containerLogo">
-            <a href="index.html" class="logo">
-                <img src="img/LOGO.png" alt="Logo de Blanqui Hogar">
+    <nav class="navbar navbar-expand-lg navbar-dark navegador">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#blanquiNav"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
             </a>
+            <div class="collapse navbar-collapse" id="blanquiNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="envio.html">Cotización de envío</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="revendedores.html">Ser revendedor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="containerLinks">
-            <li>
-                <a href="index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="catalogo.html">Catálogo</a>
-            </li>
-            <li>
-                <a href="envio.html">Cotización de envío</a>
-            </li>
-            <li>
-                <a href="revendedores.html">Ser revendedor</a>
-            </li>
-            <li>
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </div>
-    </header>
+    </nav>
 
     <div class="carrousel">
         <div class="carrouselHijo">
@@ -83,14 +92,9 @@
             </iframe>
         </div>
     </aside>
-
+    </div>
 
     <footer class="pie">
-        <div class="containerLogo">
-            <a href="index.html">
-                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
-            </a>
-        </div>
         <div class="containerRedes">
             <a href="https://whatsapp.com" class="pieWsp">
                 <img src="./img/whatsapp.ico" alt="Icono whatsapp">
@@ -103,6 +107,9 @@
             </a>
         </div>
     </footer>
+    <script src="js/bootstrap.min.js"></script>
+
+
 </body>
 
 </html>
