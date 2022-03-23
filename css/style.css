@@ -17,9 +17,9 @@ body {
 }
 
 .template-areas {
-    grid-template-rows: repeat (5, auto);
+    grid-template-rows: repeat (4, auto);
     grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "nav nav nav" "carrousel carrousel carrousel" "nosotros nosotros nosotros" "ubicacion ubicacion ubicacion" "pie pie pie";
+    grid-template-areas: "nav nav nav" "carrousel carrousel carrousel" "cuerpo cuerpo cuerpo" "pie pie pie";
 }
 
 .navegador {
@@ -34,50 +34,48 @@ body {
 
 .container-fluid {
     width: 70%;
+    margin: 0 auto;
 }
 
-.carrousel {
+.descripcion {
+    background-color: rgb(97, 91, 91);
+    flex-grow: 1;
+    margin: 0%;
+    padding: 0%;
+    opacity: 0.9;
+    border-radius: 5%;
+}
+
+#carouselExampleDark {
     grid-area: carrousel;
+    width: 70%;
+    margin: 3px auto;
+}
+
+.carousel-item > img {
+    max-height: 900px;
+}
+
+.cuerpoPrincipal {
+    grid-area: cuerpo;
+    width: 70%;
+    margin: 30px auto;
     display: flex;
-}
 
-.carrouselHijo {
-    display: flex;
-    flex: 1;
-    position: relative;
-    padding-bottom: 40.25%;
-    height: 0;
-    overflow: hidden;
 }
-
-.carrouselHijo img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .nosotros {
-    grid-area: nosotros;
-    border: solid 10px #20465c;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .nosotros > p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 5px;
 }
 
 .nosotros > h1 {
     font-size: 3rem;
-}
-
-.ubicacion {
-    grid-area: ubicacion;
-    border: #20465c solid 10px;
 }
 
 .ubicacion > h2 {
@@ -111,52 +109,16 @@ body {
     flex-basis: auto;
     width: 70%;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-@media only screen and (min-width: 768px) {
-    .grid {
-        display: grid;
-    }
-    .template-areas {
-        grid-template-rows: repeat (5, auto);
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "nav nav nav" "ubicacion ubicacion ubicacion" "nosotros nosotros nosotros" "carrousel carrousel carrousel" "pie pie pie";
-    }
+.containerRedes > a {
+    margin: 20px 0px;
 }
 
-@media only screen and (min-width: 1024px) {
-    .grid {
-        display: grid;
-    }
-    .template-areas {
-        grid-template-rows: repeat (4, auto);
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas: "nav nav nav" "carrousel carrousel carrousel" "nosotros nosotros ubicacion" "pie pie pie";
-    }
-    .navegador {
-        grid-area: nav;
-        display: flex;
-        flex-direction: row;
-    }
-    .containerLinks {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        justify-content: flex-end;
-    }
-    .pie {
-        grid-area: pie;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .containerRedes {
-        display: flex;
-        flex-basis: auto;
-        width: 70%;
-        margin: 0 auto;
-        justify-content: space-between;
+@media only screen and (min-width: 992px) {
+    #blanquiNav > ul > li > a {
+        font-size: 0.8em;
     }
 }
 
