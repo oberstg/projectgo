@@ -24,13 +24,14 @@ body {
 
 .navegador {
     grid-area: nav;
-    height: 100px;
+    height: auto;
     font-size: 2em;
     background-color: #0f6394;
 }
 
 .navbar-collapse {
     flex-grow: 0;
+    background-color: #0f6394 !important;
 }
 
 .container-fluid {
@@ -480,8 +481,8 @@ body {
 
 .template-areas-cont {
     grid-template-rows: repeat (3, auto);
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-areas: "nav" "contact" "pie";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nav nav nav" "contact contact contact" "pie pie pie";
 }
 
 .containerContacto {
