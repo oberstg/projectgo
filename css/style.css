@@ -24,6 +24,7 @@ body {
 
 .navegador {
     grid-area: nav;
+    height: 100px;
     font-size: 2em;
     background-color: #0f6394;
 }
@@ -33,10 +34,8 @@ body {
 }
 
 .container-fluid {
-    width: 70%;
-    margin: 0 auto;
+    padding: 0px;
 }
-
 .descripcion {
     background-color: rgb(97, 91, 91);
     flex-grow: 1;
@@ -48,8 +47,7 @@ body {
 
 #carouselExampleDark {
     grid-area: carrousel;
-    width: 70%;
-    margin: 3px auto;
+    margin: 5px;
 }
 
 .carousel-item > img {
@@ -58,10 +56,9 @@ body {
 
 .cuerpoPrincipal {
     grid-area: cuerpo;
-    width: 70%;
-    margin: 30px auto;
     display: flex;
-
+    padding: 5px 5px 81px 5px;
+    flex-wrap: wrap;
 }
 .nosotros {
     display: flex;
@@ -72,34 +69,47 @@ body {
 .nosotros > p {
     font-size: 1.8rem;
     padding: 5px;
+    text-align: justify;
 }
 
 .nosotros > h1 {
     font-size: 3rem;
 }
 
-.ubicacion > h2 {
-    position: relative;
-    font-size: 2.5rem;
-    text-align: center;
+.ubicacion {
+    display: none;
 }
-.containerMapa {
-    position: relative;
-    padding-bottom: 100.25%;
-    height: 0;
-    overflow: hidden;
+
+.botonContainer {
+    display: block;
+    flex-grow: 1;
 }
-.containerMapa iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+.botonContainer > p {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.botonContainer > p > button {
+    font-size: 3em;
+    flex-grow: 1;
+    border-radius: 3%;
+}
+
+.collapse > .card {
+    background-color: #e7e7e7;
+    border: 0;
+    padding: 0;
+}
+.collapse > .card > iframe {
     width: 100%;
-    height: 100%;
 }
 
 .pie {
     grid-area: pie;
     display: block;
+    height: 90px;
+    width: 100%;
     flex-direction: row;
     background-color: #0f6394;
 }
@@ -107,8 +117,9 @@ body {
 .containerRedes {
     display: flex;
     flex-basis: auto;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 10px;
     justify-content: space-between;
 }
 
@@ -119,6 +130,80 @@ body {
 @media only screen and (min-width: 992px) {
     #blanquiNav > ul > li > a {
         font-size: 0.8em;
+    }
+
+    .container-fluid {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #carouselExampleDark {
+        width: 70%;
+        margin: 20px auto;
+        border: solid 8px #ffffff;
+        border-radius: 20%;
+        overflow: hidden;
+        background-color: #e7e7e7;
+    }
+
+    #carouselExampleDark > div > div > img {
+        border-radius: 17%;
+    }
+
+    .descripcion {
+        bottom: 60px;
+    }
+
+    .cuerpoPrincipal {
+        flex-wrap: 1;
+        width: 70%;
+        margin: 30px auto;
+    }
+
+    .nosotros {
+        flex-grow: 1;
+    }
+
+    .containerRedes {
+        width: 70%;
+        padding: 0px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #blanquiNav > ul > li > a {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 1344px) {
+    .botonContainer {
+        display: none;
+    }
+
+    .ubicacion {
+        display: block;
+    }
+
+    .ubicacion > h2 {
+        position: relative;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .containerMapa {
+        position: relative;
+        padding-bottom: 100.25%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .containerMapa iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -144,10 +229,12 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
 .container {
     display: flex;
     width: 70%;
 }
+
 .catalogoProd {
     display: flex;
     flex-wrap: wrap;
@@ -155,36 +242,46 @@ body {
 }
 
 .filtros {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(248, 252, 255);
     display: flex;
     flex-direction: column;
+    height: 200px;
+    border-radius: 6%;
 }
-.titulo {
-    width: 100%;
-    text-align: center;
-    font-size: 400%;
-    margin: 0px;
+
+.filtros > a {
+    list-style: none;
+    font-size: 1.6em;
+    outline: none;
+    text-decoration: none;
+    color: black;
 }
 
 .item {
-    border: gray 2px solid;
+    background-color: #e7e7e7;
     border-radius: 2%;
-    background-color: white;
     margin: 10px;
     transition: all 1s;
 }
 
 .item:hover {
     transform: scale(1.1, 1.1);
+    margin-bottom: 2 0px;
 }
+
 .prodTit {
-    font-size: 2rem;
-    text-align: center;
-    font-weight: 500;
-    padding-top: 10px;
+    font-weight: 400;
+    font-size: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 .prodImg {
-    padding: 2px 0px;
+    border: solid 8px #f2f2f4;
+    padding: 20px 5px;
 }
 
 .prodImg > img {
@@ -192,17 +289,20 @@ body {
 }
 
 .precio {
-    font-size: 2rem;
+    margin-top: -5px;
+    font-size: 1.4rem;
     text-align: center;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .prodComp {
+    background-color: #e7e7e7;
     display: flex;
     justify-content: center;
 }
 
 .buttonComprar {
+    border: 0;
     width: 100%;
     height: 30px;
     font-size: 1.3em;
@@ -214,172 +314,223 @@ body {
 
 @media only screen and (min-width: 1024px) {
     .item {
-        border: gray 2px solid;
-        border-radius: 2%;
-        background-color: white;
         margin: 20px;
     }
 }
 
 /* CSS para Catálogo*/
 
-.revendedorCuerpo {
-    position: relative;
-    top: 100px;
+.grid-env {
+    display: grid;
 }
 
-.revendedorCuerpo > h3 {
-    font-size: 3rem;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
+.template-areas-env {
+    grid-template-rows: repeat (3, auto);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "nav nav nav" "envio envio envio" "pie pie pie";
+}
+
+.containerEnvio {
+    grid-area: envio;
+    min-height: calc(100vh - 190px);
+    padding-top: 20px;
+}
+
+.envioFormulario > fieldset > legend {
+    font-size: 2em;
     text-align: center;
+    margin: 12px 0;
+    font-weight: 500;
 }
 
-.revendedorCuerpo > p {
-    font-size: 2rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
-    text-align: center;
+.envioFormulario > fieldset {
+    padding: 3px;
+    margin: 5px 0px;
 }
 
-.revendedorCuerpo > form {
-    width: 50%;
-    position: relative;
-    left: 25%;
+.form-label {
+    font-size: 1.6em;
+    font-weight: 500;
 }
-.revendedorCuerpo > form > input {
+
+.form-check > * {
+    font-size: 1.2em;
+}
+
+.form-check {
+    padding-left: 1.9em;
+}
+
+#aclEnv {
     width: 100%;
-    height: 2em;
-    margin: 1px;
-    padding: 5px;
+    font-size: 1.5em;
 }
 
-.revendedorCuerpo > form > legend {
-    font-size: 2rem;
-    font-family: "Times New Roman", Times, serif;
-    margin: 1px;
-    padding: 2px;
-}
-
-.revendedorCuerpo > form > input[type="submit"],
-.revendedorCuerpo > form > input[type="reset"] {
-    background-color: #04aa6d;
-    border: none;
-    color: white;
-    padding: 16px 30px 20px 30px;
-    margin: 50px 20px;
-    width: auto;
-    position: relative;
-    left: 30%;
-}
-
-.footerRevendedores {
-    position: fixed;
-    bottom: 0px;
+.containerEnvBtn {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 40px 0px;
 }
 
-/* CSS para revendedores*/
-.envioFormulario {
-    width: 50%;
-    position: relative;
-    left: 25%;
-    top: 150px;
+.containerEnvBtn > input {
+    font-size: 1.4em;
 }
 
-.envioCuerpo > .envioFormulario > h3 {
-    font-size: 2rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
-    text-align: center;
-}
-
-.envioFormulario > form > fieldset > * {
-    font-size: 2rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
-    margin: 5px;
-}
-
-.envioFormulario > form > fieldset > legend {
-    font-weight: bold;
-}
-
-.envioFormulario > form > input[type="reset"],
-.envioFormulario > form > input[type="submit"] {
-    background-color: #04aa6d;
-    border: none;
-    color: white;
-    padding: 16px 30px 20px 30px;
-    margin: 50px 20px;
-    width: auto;
-    position: relative;
-    left: 30%;
-}
-
-.footerEnvio {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+@media only screen and (min-width: 992px) {
+    .containerEnvio {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .containerEnvio > .envioFormulario > fieldset > legend {
+        font-size: 3em;
+    }
 }
 
 /*CSS para envio*/
 
-.contactoFormulario {
-    width: 50%;
-    left: 25%;
-    position: relative;
-    top: 50px;
+.grid-rev {
+    display: grid;
 }
 
-.contactoCuerpo > .contactoFormulario > h3 {
-    font-size: 3rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
+.template-areas-rev {
+    grid-template-rows: repeat (3, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "nav" "rev" "pie";
+}
+
+.containerRevendedores {
+    grid: rev;
+    min-height: calc(100vh - 190px);
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerRevendedores > h2 {
+    font-size: 2.2em;
     text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-weight: 500;
 }
 
-.contactoCuerpo > .contactoFormulario > p {
-    font-size: 2rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
-    text-align: center;
+.containerRevendedores > p {
+    font-size: 1.4em;
+    text-align: justify;
+    margin-bottom: -15px;
 }
 
-.contactoFormulario > form > * {
-    font-size: 2rem;
-    color: black;
-    font-family: "Times New Roman", Times, serif;
-    text-decoration: none;
+.reveFormulario > div {
+    margin: 30px 0px;
+}
+
+.reveFormulario > div > label {
+    font-weight: 500;
+}
+.containerRevBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.containerRevBtn > input {
+    font-size: 1.5em;
+}
+
+#containerLocalidad {
+    display: flex;
+    flex-direction: row;
+}
+
+#inpLocalidad {
+    flex: 1;
+    font-size: 1.4em;
+    margin-left: 20px;
+}
+
+#inpNombre,
+#inpTelefono,
+#inpEmail {
+    font-size: 1.4em;
+}
+
+@media only screen and (min-width: 992px) {
+    .containerRevendedores {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .containerRevendedores > h2 {
+        font-size: 3em;
+    }
+}
+
+/* CSS para revendedores*/
+
+.grid-cont {
+    display: grid;
+}
+
+.template-areas-cont {
+    grid-template-rows: repeat (3, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "nav" "contact" "pie";
+}
+
+.containerContacto {
+    grid-area: contact;
     margin: 5px;
-    width: 100%;
+    min-height: calc(100vh - 190px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.contactoFormulario > form > legend {
-    font-weight: bold;
+.containerContacto > h3 {
+    font-size: 2.2em;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-weight: 500;
 }
 
-.contactoFormulario > form > input[type="reset"],
-.contactoFormulario > form > input[type="submit"] {
-    background-color: #04aa6d;
-    border: none;
-    color: white;
-    padding: 16px 30px 20px 30px;
-    margin: 50px 20px;
-    width: auto;
-    position: relative;
-    left: 30%;
+.containerContacto > p {
+    font-size: 1.4em;
+    text-align: justify;
+    margin-bottom: -15px;
 }
 
-.footerContacto {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
+.containerContacto > .contFormulario > div {
+    margin: 30px 0px;
+}
+
+.contFormulario > div > label {
+    font-weight: 500;
+}
+
+#contNombre,
+#contEmail,
+#contConsul {
+    font-size: 1.4em;
+}
+
+@media only screen and (min-width: 992px) {
+    .containerContacto {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .containerContacto > h3 {
+        font-size: 3em;
+    }
 }
 
 /*CSS para Contacto*/

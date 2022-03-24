@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanqui Hogar - Tienda online</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+
+<body class="grid-env template-areas-env">
 
     <nav class="navbar navbar-expand-lg navbar-dark navegador">
         <div class="container-fluid">
@@ -43,61 +47,99 @@
         </div>
     </nav>
 
-    <section class="envioCuerpo">
-        <div class="envioFormulario">
-            <h3>Solicita la cotización de tu envío</h3>
-            <form action="envio.php" method="post">
-                <fieldset>
-                    <legend>Monto de tu pedido</legend>
-                    <label for="inferior">Inferior a 10000$</label>
-                    <input type="radio" name="monto" value="inferior" id="inferior">
-                    <br>
-                    <label for="superior">Superior a 10000$</label>
-                    <input type="radio" name="monto" value="superior" id="superior">
-                </fieldset>
-                <fieldset>
-                    <legend>Localidad de destino</legend>
-                    <label for="buenosaires">Buenos Aires</label>
-                    <input type="radio" name="localidad" value="buenosaires" id="buenosaires">
-                    <br>
-                    <label for="resto">Resto del país</label>
-                    <input type="radio" name="localidad" value="resto" id="resto">
-                </fieldset>
-                <fieldset>
-                    <legend>Tipo de envío</legend>
-                    <label for="rapido">Envío rápido</label>
-                    <input type="radio" name="tipo" value="rapido" id="rapido">
-                    <br>
-                    <label for="normal">Envío con normalidad</label>
-                    <input type="radio" name="tipo" value="normal" id="normal">
-                </fieldset>
-                <br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Cancelar">
-            </form>
-        </div>
-    </section>
+    <div class="containerEnvio">
+        <form class="envioFormulario">
+            <fieldset>
+                <legend>Solicita la cotización de tu envío </legend>
+                <div class="mb-3">
+                    <label for="montoEnv" class="form-label">Indicá el monto de tu pedido</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo1" id="envSup" checked>
+                        <label class="form-check-label" for="envSup">
+                            Monto superior a $10.000
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo1" id="envInf">
+                        <label class="form-check-label" for="envInf">
+                            Monto inferior a $10.000
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="locaEnv" class="form-label">Selecciona tu localidad</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo2" id="locaCaba" checked>
+                        <label class="form-check-label" for="locaCaba">
+                            CABA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo2" id="locaAmba">
+                        <label class="form-check-label" for="locaAmba">
+                            AMBA
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo2" id="locaInt">
+                        <label class="form-check-label" for="locaInt">
+                            Interior
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="tipoEnv" class="form-label">Elegí el tipo de envío</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo3" id="envRap" checked>
+                        <label class="form-check-label" for="envRap">
+                            Envío rápido
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo3" id="envNorm">
+                        <label class="form-check-label" for="envNorm">
+                            Envío con normalidad
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="mb-3">
+                    <label for="aclEnv" class="form-label">¿Algún comentario o aclaración?</label>
+                    <div>
+                        <textarea id="aclEnv" name="subject" placeholder=" " style="height:100px"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="containerEnvBtn">
+                <input class="btn btn-primary" type="submit" value="Enviar">
+                <input class="btn btn-primary" type="reset" value="Reiniciar">
+            </div>
+        </form>
+    </div>
 
 
- 
+
+
     <footer class="pie">
-        <div class="containerLogo">
-            <a href="index.html">
-                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
-            </a>
-        </div>
         <div class="containerRedes">
-            <a href="https://whatsapp.com" class="pieWsp">
+            <a target="_blank" href="https://whatsapp.com" class="pieWsp">
                 <img src="./img/whatsapp.ico" alt="Icono whatsapp">
             </a>
-            <a href="https://facebook.com" class="pieFb">
+            <a target="_blank" href="https://facebook.com" class="pieFb">
                 <img src="./img/facebook.ico" alt="Icono facebook">
             </a>
-            <a href="https://twitter.com" class="pieTw">
+            <a target="_blank" href="https://twitter.com" class="pieTw">
                 <img src="./img/twitter.ico" alt="Icono twitter">
             </a>
         </div>
     </footer>
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

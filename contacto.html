@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanqui Hogar - Tienda online</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+
+<body class="grid-cont template-areas-cont">
     <nav class="navbar navbar-expand-lg navbar-dark navegador">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#blanquiNav"
@@ -41,41 +45,49 @@
             </div>
         </div>
     </nav>
+    <div class="containerContacto">
+        <h3>Dejanos todas tus consultas</h3>
+        <p>Comprar de forma online a veces puede resultar frustrante. Ante cualquier consulta, no dudes en
+            escribirnos.</p>
+        <form class="contFormulario">
+            <div class="mb-3">
+                <label for="contNombre" class="form-label">Nombre y apellido</label>
+                <input type="text" class="form-control" id="contNombre" aria-describedby="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="contEmail" class="form-label">Correo electrónico</label>
+                <input type="text" class="form-control" id="contEmail">
+            </div>
+            <div class="mb-3">
+                <label for="contConsul" class="form-label">Deja tu consulta debajo</label>
+                <div>
+                    <textarea id="aclEnv" name="subject" placeholder="Nos comunicaremos a la brevedad"
+                        style="height:100px"></textarea>
+                </div>
+            </div>
 
-
-    <section class="contactoCuerpo">
-        <div class="contactoFormulario">
-            <h3>Dejanos todas tus consultas</h3>
-            <p>Comprar de forma online a veces puede resultar frustrante. Ante cualquier consulta, no dudes en
-                escribirnos.</p>
-            <form action="envio.php" method="post">
-                <legend>Introduzca su nombre y apellido</legend>
-                <input type="text" placeholder="Nombre y apellido">
-                <legend>Introduzca su correo de contacto</legend>
-                <input type="email" placeholder="Correo electrónico">
-                <legend>Ante una consulta, escriba debajo</legend>
-                <textarea name="consulta" id="consulta" cols="30" rows="10"
-                    placeholder="No dudes en preguntar"></textarea>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Cancelar">
-            </form>
-        </div>
-    </section>
-
+            <div class="containerRevBtn">
+                <input class="btn btn-primary" type="submit" value="Enviar">
+                <input class="btn btn-primary" type="reset" value="Reiniciar">
+            </div>
+        </form>
+    </div>
 
     <footer class="pie">
         <div class="containerRedes">
-            <a href="https://whatsapp.com" class="pieWsp">
+            <a target="_blank" href="https://whatsapp.com" class="pieWsp">
                 <img src="./img/whatsapp.ico" alt="Icono whatsapp">
             </a>
-            <a href="https://facebook.com" class="pieFb">
+            <a target="_blank" href="https://facebook.com" class="pieFb">
                 <img src="./img/facebook.ico" alt="Icono facebook">
             </a>
-            <a href="https://twitter.com" class="pieTw">
+            <a target="_blank" href="https://twitter.com" class="pieTw">
                 <img src="./img/twitter.ico" alt="Icono twitter">
             </a>
         </div>
-    </footer> 
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
