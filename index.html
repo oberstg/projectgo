@@ -8,23 +8,25 @@
     <title>Blanqui Hogar - Tienda online</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
 </head>
 
-<body class="grid template-areas">
+<body id="bodyIndex">
 
-    <nav class="navbar navbar-expand-lg navbar-dark navegador">
-        <div class="container-fluid">
-            <button class="navbar-toggler prueba" type="button" data-bs-toggle="collapse" data-bs-target="#blanquiNav"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <nav id="navegador" class="navbar navbar-expand-lg navbar-dark">
+        <div id="contNav" class="container-fluid">
+            <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="index.html">
                 <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
             </a>
-            <div class="collapse navbar-collapse" id="blanquiNav">
+            <div id="dropNav" class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
@@ -46,23 +48,23 @@
         </div>
     </nav>
 
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
+    <div id="contCarrusel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div id="contCarruselSub" class="carousel-inner">
+            <div class="carousel-item active carruselItem" data-bs-interval="10000">
                 <img src="img/carrusel1.png" class="d-block w-100" alt="Producto 1">
                 <div class="d-flex carousel-caption d-none d-md-block descripcion">
                     <h3>OFERTA DE LA SEMANA</h3>
                     <h4>Precio de $1000</h4>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="carousel-item carruselItem" data-bs-interval="2000">
                 <img src="img/carrusel2.png" class="d-block w-100" alt="...">
                 <div class="d-flex carousel-caption d-none d-md-block descripcion">
                     <h3>OFERTA DE LA SEMANA</h3>
                     <h4>Precio de $1000</h4>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item carruselItem">
                 <img src="img/carrusel3.png" class="d-block w-100" alt="...">
                 <div class="d-flex carousel-caption d-none d-md-block descripcion">
                     <h3>OFERTA DE LA SEMANA</h3>
@@ -70,24 +72,23 @@
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#contCarrusel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#contCarrusel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <div class="cuerpoPrincipal">
-        <main class="nosotros col-lg-8 col-md-12">
-            <h1>¿Quiénes conformamos Blanqui Hogar?</h1>
 
+    <div id="contIndexMain">
+        <main id="contNosotros" class="col-lg-8 col-md-12">
+            <h1>¿Quiénes conformamos Blanqui Hogar?</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, enim? At voluptatem neque
                 eveniet? Porro adipisci odit magnam nisi ullam consequuntur, vitae cumque debitis tempora quas quis
                 necessitatibus corrupti fugiat.</p>
-
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, non magnam quasi dolores laborum optio
                 cumque facere est libero voluptatem voluptate enim officiis dolorem? At nemo ratione aperiam possimus
                 natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequatur quo perferendis itaque
@@ -99,9 +100,8 @@
                 nostrum culpa consequuntur voluptatem error placeat? Voluptates. Lorem ipsum dolor sit, amet consectetur
                 adipisicing elit. Quasi ipsam tempora quam ad! Reiciendis quis voluptates qui numquam ratione!
                 Doloremque cupiditate ullam officiis quisquam ut mollitia ea illum autem natus?</p>
-
         </main>
-        <aside class="ubicacion col-lg-4 col-md-12">
+        <aside id="contMapa" class="col-lg-4 col-md-12">
             <h2>¿Dónde encontrarnos?</h2>
             <div class="containerMapa">
                 <iframe
@@ -110,15 +110,14 @@
                 </iframe>
             </div>
         </aside>
-
-        <div class="botonContainer">
+        <div id="contBtnMapa">
             <p>
                 <button id="botonMaps" class="btn btn-primary" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    data-bs-target="#dropMapa" aria-expanded="false" aria-controls="collapseExample">
                     ¿Dónde encontrarnos?
                 </button>
             </p>
-            <div class="collapse" id="collapseExample">
+            <div class="collapse" id="dropMapa">
                 <div class="card card-body">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.5011488461096!2d-64.29656398442741!3d-36.61432187998736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c2cd0bea4691e1%3A0x3cee8f34ed412278!2sCatamarca%20947%2C%20L6302EGS%20Santa%20Rosa%2C%20La%20Pampa!5e0!3m2!1ses-419!2sar!4v1644789732785!5m2!1ses-419!2sar"
@@ -129,15 +128,15 @@
         </div>
     </div>
 
-    <footer class="pie">
-        <div class="containerRedes">
-            <a target="_blank" href="https://whatsapp.com" class="pieWsp">
+    <footer id="pie">
+        <div id="contPie">
+            <a target="_blank" href="https://whatsapp.com">
                 <img src="./img/whatsapp.ico" alt="Icono whatsapp">
             </a>
-            <a target="_blank" href="https://facebook.com" class="pieFb">
+            <a target="_blank" href="https://facebook.com">
                 <img src="./img/facebook.ico" alt="Icono facebook">
             </a>
-            <a target="_blank" href="https://twitter.com" class="pieTw">
+            <a target="_blank" href="https://twitter.com">
                 <img src="./img/twitter.ico" alt="Icono twitter">
             </a>
         </div>

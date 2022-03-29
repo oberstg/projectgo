@@ -8,6 +8,7 @@
     <title>Blanqui Hogar - Tienda online</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
@@ -15,22 +16,23 @@
 
 <body class="gridCat template-areas-cat">
 
-    <nav class="navbar navbar-expand-lg navbar-dark navegador">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#blanquiNav"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <nav id="navegador" class="navbar navbar-expand-lg navbar-dark">
+        <div id="contNav" class="container-fluid">
+            <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="index.html">
                 <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
             </a>
-            <div class="collapse navbar-collapse" id="blanquiNav">
+            <div id="dropNav" class="collapse navbar-collapse">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="catalogo.html">Catálogo</a>
+                        <a class="nav-link active" aria-current="page" href="catalogo.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="envio.html">Cotización de envío</a>
@@ -46,17 +48,16 @@
         </div>
     </nav>
 
-
     <section class="row catalogo">
         <div class="container mt-3 pt-2 ">
             <div class="row text-center align-items-top">
                 <div class="col-md-3 mb-4 filtros">
                     <h2 class="pb-2">MARCAS</h3>
-                    <a href="">Sábanas</a>
-                    <a href="">Acolchados</a>
-                    <a href="">Toallones</a>
-                    <a href="">Batas</a>
-                    <a href="">Infantiles</a>
+                        <a href="">Sábanas</a>
+                        <a href="">Acolchados</a>
+                        <a href="">Toallones</a>
+                        <a href="">Batas</a>
+                        <a href="">Infantiles</a>
 
                 </div>
                 <div class="col-md-9 catalogoProd">
@@ -66,7 +67,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -80,7 +81,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -94,7 +95,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -108,7 +109,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -122,7 +123,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -136,7 +137,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -150,7 +151,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -164,7 +165,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -178,7 +179,7 @@
                         </div>
                         <div class="prodTit">
                             <p>COLCHA REVERSIBLE</p>
-                        </div>  
+                        </div>
                         <div class="prodPrec">
                             <p class="precio">3.000$</p>
                         </div>
@@ -186,25 +187,19 @@
                             <button type="button" class="buttonComprar btn btn-success">Comprar</button>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
-
     </section>
-
-
-
-    <footer class="pie">
-        <div class="containerRedes">
-            <a href="https://whatsapp.com" class="pieWsp">
+    <footer id="pie">
+        <div id="contPie">
+            <a target="_blank" href="https://whatsapp.com">
                 <img src="./img/whatsapp.ico" alt="Icono whatsapp">
             </a>
-            <a href="https://facebook.com" class="pieFb">
+            <a target="_blank" href="https://facebook.com">
                 <img src="./img/facebook.ico" alt="Icono facebook">
             </a>
-            <a href="https://twitter.com" class="pieTw">
+            <a target="_blank" href="https://twitter.com">
                 <img src="./img/twitter.ico" alt="Icono twitter">
             </a>
         </div>

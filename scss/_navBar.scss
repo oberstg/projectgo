@@ -1,0 +1,26 @@
+#navegador {
+    font-size: $fontMd;
+    background-color: $mainColor;
+    #contNav {
+        padding: 0px;
+    }
+    #hambNav {
+        margin-left: 5px;
+    }
+    #dropNav {
+        flex-grow: 0;
+        margin-left: 5px;
+    }
+    @media only screen and (min-width: 992px) {
+        #contNav {
+            width: 70%;
+            margin: 0 auto;
+        }
+        #dropNav {
+            a {
+                font-size: 0.8em;
+                margin: 0px 5px;
+            }
+        }
+    }
+}

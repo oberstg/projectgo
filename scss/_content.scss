@@ -1,0 +1,120 @@
+body {
+    background-color: $secondaryColor;
+}
+
+#bodyIndex {
+    #contCarrusel {
+        margin: 5px;
+        img {
+            max-height: 900px;
+        }
+        .descripcion {
+            background-color: rgb(97, 91, 91);
+            flex-grow: 1;
+            margin: 0%;
+            padding: 0%;
+            opacity: 0.9;
+            border-radius: 5%;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        #contCarrusel {
+            width: 70%;
+            margin: 20px auto;
+            border: solid 8px #ffffff;
+            border-radius: 20%;
+            overflow: hidden;
+            background-color: $secondaryColor;
+            img {
+                border-radius: 17%;
+            }
+            .descripcion {
+                bottom: 60px;
+            }
+        }
+    }
+
+    #contIndexMain {
+        padding: 5px 5px 81px 5px;
+        flex-wrap: wrap;
+        display: flex;
+        #contNosotros {
+            flex-direction: column;
+            align-items: center;
+            p {
+                font-size: $fontMd;
+                padding: 5px;
+                text-align: justify;
+            }
+            h1 {
+                font-size: $fontLg;
+                text-align: center;
+            }
+        }
+        #contMapa {
+            display: none;
+        }
+        #contBtnMapa {
+            display: block;
+            flex-grow: 1;
+            p {
+                display: flex;
+                margin-bottom: 3px;
+                button {
+                    font-size: $fontLg;
+                    flex-grow: 1;
+                    border-radius: 3%;
+                }
+            }
+            #dropMapa {
+                .card {
+                    background-color: $secondaryColor;
+                    border: 0;
+                    padding: 0;
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        #contIndexMain {
+            flex-wrap: 1;
+            width: 70%;
+            margin: 0px auto;
+            #contNosotros {
+                flex-grow: 1;
+            }
+        }
+    }
+    @media only screen and (min-width: 1344px) {
+        #contIndexMain {
+            #contBtnMapa {
+                display: none;
+            }
+            #contMapa {
+                display: block;
+                h2 {
+                    position: relative;
+                    font-size: 2.5em;
+                    text-align: center;
+                }
+                .containerMapa {
+                    position: relative;
+                    padding-bottom: 100.25%;
+                    height: 0;
+                    overflow: hidden;
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
