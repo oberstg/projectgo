@@ -1,3 +1,8 @@
 //colores
 $mainColor: #0f6394;
 $secondaryColor: #e7e7e7;
+
+@mixin contFlex($width, $margin){
+    width: $width;
+    margin: $margin; 
+}
