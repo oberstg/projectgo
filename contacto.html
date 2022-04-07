@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="El cliente es lo primero. ¡No te quedes con las dudas! Contactá a Blanqui Hogar.">
-    <meta name="keywords" content="BLANQUI, HOGAR, BLANQUI HOGAR, TIENDA, BLANQUERÍA, OFERTAS, SANTA ROSA, LA PAMPA, CONTACTO">;
+    <meta name="description"
+        content="Blanqui Hogar representa compromiso y dedicación. Es tú tienda preferida de blanquería. Estamos en Santa Rosa, La Pampa.">
+    <meta name="keywords"
+        content="BLANQUI, HOGAR, BLANQUI HOGAR, TIENDA, BLANQUERÍA, OFERTAS, SANTA ROSA, LA PAMPA, CONTACTO">
     <title>Blanqui Hogar - Contacto</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
         rel="stylesheet">
 </head>
 
-
-<body class="grid-cont template-areas-cont">
+<body id="contBody">
     <nav id="navegador" class="navbar navbar-expand-lg navbar-dark navegador">
         <div id="contNav" class="container-fluid">
             <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,7 +34,7 @@
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  href="catalogo.html">Catálogo</a>
+                        <a class="nav-link" href="catalogo.html">Catálogo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="envio.html">Cotización de envío</a>
@@ -50,11 +50,11 @@
         </div>
     </nav>
 
-    <div class="containerContacto">
-        <h3>Dejanos todas tus consultas</h3>
+    <div id="contCont">
+        <h1>Contactate con Blanqui Hogar</h1>
         <p>Comprar de forma online a veces puede resultar frustrante. Ante cualquier consulta, no dudes en
             escribirnos.</p>
-        <form class="contFormulario">
+        <form id="contForm">
             <div class="mb-3">
                 <label for="contNombre" class="form-label">Nombre y apellido</label>
                 <input type="text" class="form-control" id="contNombre" aria-describedby="nombre">
@@ -65,13 +65,10 @@
             </div>
             <div class="mb-3">
                 <label for="contConsul" class="form-label">Deja tu consulta debajo</label>
-                <div>
-                    <textarea id="aclEnv" name="subject" placeholder="Nos comunicaremos a la brevedad"
-                        style="height:100px"></textarea>
-                </div>
+                <textarea id="contConsul" name="subject" placeholder="Nos comunicaremos a la brevedad"
+                    style="height:100px"></textarea>
             </div>
-
-            <div class="containerRevBtn">
+            <div id="contContbtn">
                 <input class="btn btn-primary" type="submit" value="Enviar">
                 <input class="btn btn-primary" type="reset" value="Reiniciar">
             </div>
@@ -90,7 +87,7 @@
                 <img src="./img/twitter.ico" alt="Icono twitter">
             </a>
         </div>
-    </footer>   
+    </footer>
     <script src="js/bootstrap.min.js"></script>
 
 </body>

@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asegurate de que el envío entre en tu presupuesto. Cotiza segun tú zona.">
-    <meta name="keywords" content="BLANQUI, HOGAR, BLANQUI HOGAR, TIENDA, BLANQUERÍA, SANTA ROSA, LA PAMPA, ENVÍO, ENVÍO RÁPIDO, CABA, AMBA, INTERIOR">;
+    <meta name="description"
+        content="Blanqui Hogar representa compromiso y dedicación. Es tú tienda preferida de blanquería. Estamos en Santa Rosa, La Pampa.">
+    <meta name="keywords"
+        content="BLANQUI, HOGAR, BLANQUI HOGAR, TIENDA, BLANQUERÍA, SANTA ROSA, LA PAMPA, ENVÍO, ENVÍO RÁPIDO, CABA, AMBA, INTERIOR">
     <title>Blanqui Hogar - Cotización de envío</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap"
@@ -17,8 +18,7 @@
 </head>
 
 
-<body class="grid-env template-areas-env">
-
+<body id="envBody">
     <nav id="navegador" class="navegador navbar navbar-expand-lg navbar-dark">
         <div id="contNav" class="container-fluid">
             <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -51,11 +51,10 @@
         </div>
     </nav>
 
-
-    <div class="containerEnvio">
-        <form class="envioFormulario">
-            <fieldset>
-                <legend>Solicita la cotización de tu envío </legend>
+    <main id="envCont" class="col-lg-12">
+        <H1>Solicitá la cotización de tu envío</H1>
+        <form id="envForm" class="col-lg-12">
+            <fieldset class="col-lg-2.5">
                 <div class="mb-3">
                     <label for="montoEnv" class="form-label">Indicá el monto de tu pedido</label>
                     <div class="form-check">
@@ -72,7 +71,7 @@
                     </div>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="col-lg-2.5">
                 <div class="mb-3">
                     <label for="locaEnv" class="form-label">Selecciona tu localidad</label>
                     <div class="form-check">
@@ -95,7 +94,7 @@
                     </div>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="col-lg-2.5">
                 <div class="mb-3">
                     <label for="tipoEnv" class="form-label">Elegí el tipo de envío</label>
                     <div class="form-check">
@@ -112,20 +111,37 @@
                     </div>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="col-lg-2.5">
                 <div class="mb-3">
+                    <label for="tipoEnv" class="form-label">¿A tu domicilio o al correo?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo4" id="envDomic" checked>
+                        <label class="form-check-label" for="envDomic">
+                            Envío a domicilio
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="grupo4" id="envCorreo">
+                        <label class="form-check-label" for="envCorreo">
+                            Retiro por correo
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset id="envTextarea1" class="col-lg-12">
+                <div id="envTextarea2" class="mb-3">
                     <label for="aclEnv" class="form-label">¿Algún comentario o aclaración?</label>
                     <div>
                         <textarea id="aclEnv" name="subject" placeholder=" " style="height:100px"></textarea>
                     </div>
                 </div>
             </fieldset>
-            <div class="containerEnvBtn">
+            <div id="envContbtn">
                 <input class="btn btn-primary" type="submit" value="Enviar">
                 <input class="btn btn-primary" type="reset" value="Reiniciar">
             </div>
         </form>
-    </div>
+    </main>
     <footer id="pie" class="pie">
         <div id="contPie">
             <a target="_blank" href="https://whatsapp.com">

@@ -1,16 +1,16 @@
 body {
     background-color: $secondaryColor;
 }
-.h1{
+.h1 {
     font-size: $fontLg;
     text-align: center;
 }
 
 $colores: (
-    '1': $mainColor,
-    '2': $secondaryColor,
-    '3': #615b5b,
-    '4': #ffffff,
+    "1": $mainColor,
+    "2": $secondaryColor,
+    "3": #615b5b,
+    "4": #ffffff,
 );
 
 #bodyIndex {
@@ -20,16 +20,16 @@ $colores: (
             max-height: 900px;
         }
         .descripcion {
-            background-color: map-get($map: $colores, $key: '3' );
+            background-color: map-get($map: $colores, $key: "3");
             flex-grow: 1;
             margin: 0%;
             padding: 0%;
             opacity: 0.9;
             border-radius: 5%;
-            p{
+            p {
                 font-size: $fontMd;
             }
-            h3{
+            h3 {
                 padding-top: 10px;
             }
         }
@@ -40,7 +40,7 @@ $colores: (
             border: solid 8px #ffffff;
             border-radius: 20%;
             overflow: hidden;
-            background-color: map-get($map: $colores, $key: '2' )
+            background-color: map-get($map: $colores, $key: "2") ;
             img {
                 border-radius: 17%;
             }
@@ -57,6 +57,7 @@ $colores: (
         #contNosotros {
             flex-direction: column;
             align-items: center;
+            padding-right: 20px;
             p {
                 font-size: $fontMd;
                 padding: 5px;
@@ -83,7 +84,7 @@ $colores: (
             }
             #dropMapa {
                 .card {
-                    background-color: map-get($map: $colores, $key: '2' );
+                    background-color: map-get($map: $colores, $key: "2");
                     border: 0;
                     padding: 0;
                     iframe {
@@ -119,6 +120,7 @@ $colores: (
                     padding-bottom: 100.25%;
                     height: 0;
                     overflow: hidden;
+                    border: #615b5b 1px solid;
                     iframe {
                         position: absolute;
                         top: 0;
@@ -128,6 +130,289 @@ $colores: (
                     }
                 }
             }
+        }
+    }
+}
+
+#catBody {
+    #cat {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        #catCont {
+            @include contFlex(70%, 0 auto);
+            #catFiltros {
+                margin-top: 40px;
+                justify-content: center;
+                background-color: rgb(248, 252, 255);
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                border-radius: 6%;
+                a {
+                    list-style: none;
+                    font-size: 1.6em;
+                    outline: none;
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            #catProd {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .item {
+                    background-color: $secondaryColor;
+                    border-radius: 2%;
+                    margin: 20px 10px;
+                    transition: all 0.4s;
+                    &:hover {
+                        transform: scale(1.1, 1.1);
+                        margin-bottom: 25px;
+                    }
+                    .prodTit {
+                        font-weight: 500;
+                        font-size: 1.6em;
+                        margin-top: 10px;
+                    }
+                    .prodImg {
+                        border: solid 8px #c9c1b7;
+                        padding: 10px 5px;
+                        border-radius: 5%;
+                        img {
+                            max-width: 22rem;
+                            border-radius: 5%;
+                        }
+                    }
+                    .precio {
+                        margin-top: -5px;
+                        font-size: 1.6rem;
+                        text-align: center;
+                        font-weight: 300;
+                    }
+                    .prodComp {
+                        background-color: #e7e7e7;
+                        display: flex;
+                        justify-content: center;
+                        .buttonComprar {
+                            border: 0;
+                            width: 100%;
+                            height: 30px;
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#envBody {
+    #envCont {
+        min-height: calc(100vh - 195px);
+        h1 {
+            text-align: center;
+            margin: 30px 0px;
+        }
+        #envForm {
+            fieldset {
+                padding: 3px;
+                margin: 5px 0px 5px 5px;
+                .form-label {
+                    font-size: $fontMd;
+                    font-weight: 500;
+                }
+                .form-check {
+                    .form-check-label {
+                        font-size: 1.4em;
+                    }
+                }
+            }
+            #envTextarea2 {
+                font-size: 1em;
+                #aclEnv {
+                    width: 100%;
+                    font-size: 1.5em;
+                }
+            }
+        }
+        #envContbtn {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            input {
+                font-size: $fontMd;
+                width: 100px;
+                margin: 0px 50px;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        #envCont {
+            @include contFlex(70%, auto);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-size: $fontLg;
+                margin-top: -50px;
+            }
+            #envForm {
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                fieldset {
+                    display: flex;
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 10%;
+                    box-shadow: 1px 1px rgb(0, 0, 0);
+                    padding: 20px;
+                }
+                legend {
+                    font-size: $fontMd;
+                }
+                #envTextarea1 {
+                    border-radius: 3%;
+                    background-color: $secondaryColor;
+                    box-shadow: none;
+                    #envTextarea2 {
+                        width: 95%;
+                        margin: auto;
+                        font-size: 1em;
+                        #aclEnv {
+                            width: 100%;
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#revBody {
+    #revCont {
+        min-height: calc(100vh - 195px);
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        h1 {
+            font-size: $fontLg;
+            text-align: center;
+            font-weight: 500;
+            margin: 30px 0px;
+        }
+        p {
+            font-size: $fontMd;
+            text-align: justify;
+        }
+        #revForm {
+            div {
+                margin: 15px 0px;
+                label {
+                    font-weight: 500;
+                    font-size: $fontMd;
+                }
+            }
+            #inpNombre,
+            #inpTelefono,
+            #inpEmail {
+                font-size: $fontMd;
+            }
+            #containerLocalidad {
+                display: flex;
+                flex-direction: column;
+                #inpLocalidad {
+                    flex: 1;
+                    font-size: $fontMd;
+                }
+            }
+            #revContbtn {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                input {
+                    font-size: $fontMd;
+                    width: 100px;
+                    margin: 0px 50px;
+                }
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        #revCont {
+            width: 70%;
+            margin: 0 auto;
+            justify-content: center;
+            h1 {
+                margin: 30px;
+            }
+            #revForm {
+                div {
+                    margin: 30px 0px;
+                    input {
+                        box-shadow: 3px 0px 3px rgb(129, 125, 125);
+                    }
+                }
+            }
+        }
+    }
+}
+#contBody {
+    #contCont {
+        margin: 5px;
+        min-height: calc(100vh - 195px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            font-size: $fontLg;
+            text-align: center;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        p {
+            font-size: $fontMd;
+            text-align: justify;
+        }
+        #contForm {
+            div {
+                margin: 30px 0px;
+                label {
+                    font-weight: 500;
+                    font-size: $fontMd;
+                }
+            }
+            #contNombre,
+            #contEmail,
+            #contConsul {
+                font-size: $fontMd;
+            }
+        }
+        #contConsul {
+            width: 100%;
+        }
+        #contContbtn {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            input {
+                font-size: $fontMd;
+                width: 100px;
+                margin: 0px 50px;
+            }
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        #contCont {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .containerContacto > h3 {
+            font-size: 3em;
         }
     }
 }

@@ -1,7 +1,7 @@
 {
-  "name": "sass",
+  "name": "Blanqui Hogar - Tienda online",
   "version": "1.0.0",
-  "description": "proyecto",
+  "description": "Diseño de un sitio web para el negocio de mi familia",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
