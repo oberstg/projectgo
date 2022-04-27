@@ -19,88 +19,91 @@
 
 
 <body id="revBody">
-    <nav id="navegador" class="navbar navbar-expand-lg navbar-dark">
-        <div id="contNav" class="container-fluid">
-            <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">
-                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
-            </a>
-            <div id="dropNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalogo.html">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="envio.html">Cotización de envío</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="revendedores.html">Ser revendedor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+    <header>
+        <nav id="navegador" class="navbar navbar-expand-lg navbar-dark">
+            <div id="contNav" class="container-fluid">
+                <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
+                </a>
+                <div id="dropNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="envio.html">Cotización de envío</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="revendedores.html">Ser revendedor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+    <main>
+        <div id="revCont">
+            <div id="revTexto">
+                <h1>El equipo de trabajo de Blanqui Hogar</h1>
+                <p>Mantener el nivel, la dedicación, la eficiencia y la empatía puede resultar un tanto complicado. Requiere de mucha energía y esfuerzo. Por eso, buscamos personas con el mismo ímpetu que nosotros. Si te interesa nuestra propuesta y nuestro ambiente de trabajo, <strong>¡contactanos!</strong></p>
+            </div>
+            <form id="revForm">
+                <div class="mb-3">
+                    <label for="inpNombre" class="form-label col-lg-3">Nombre y apellido</label>
+                    <input type="text" class="form-control" id="inpNombre" aria-describedby="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="inpTelefono" class="form-label col-lg-3">Teléfono de contacto</label>
+                    <input type="text" class="form-control" id="inpTelefono">
+                </div>
+                <div class="mb-3">
+                    <label for="inpEmail" class="form-label col-lg-3">Correo electrónico</label>
+                    <input type="text" class="form-control" id="inpEmail">
+                </div>
+                <div id="containerLocalidad" class="mb-3">
+                    <label for="inpLocalidad" class="form-label col-lg-3">Localidad</label>
+                    <select id="inpLocalidad">
+                        <option value="1">BUENOS AIRES</option>
+                        <option value="2">CATAMARCA</option>
+                        <option value="5">CHACO</option>
+                        <option value="6">CHUBUT</option>
+                        <option value="50">CIUDAD AUTONOMA DE Bs As</option>
+                        <option value="3">CORDOBA</option>
+                        <option value="4">CORRIENTES</option>
+                        <option value="7">ENTRE RIOS</option>
+                        <option value="8">FORMOSA</option>
+                        <option value="9">JUJUY</option>
+                        <option value="10">LA PAMPA</option>
+                        <option value="11">LA RIOJA</option>
+                        <option value="12">MENDOZA</option>
+                        <option value="13">MISIONES</option>
+                        <option value="14">NEUQUEN</option>
+                        <option value="15">RIO NEGRO</option>
+                        <option value="16">SALTA</option>
+                        <option value="17">SAN LUIS</option>
+                        <option value="19">SANTA CRUZ</option>
+                        <option value="20">SANTA FE</option>
+                        <option value="21">SANTIAGO DEL ESTERO</option>
+                        <option value="22">TIERRA DEL FUEGO</option>
+                    </select>
+                </div>
+                <div id="revContbtn">
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                    <input class="btn btn-primary" type="reset" value="Reiniciar">
+                </div>
+            </form>
         </div>
-    </nav>
-
-    <main id="revCont">
-        <h1>El equipo de trabajo de Blanqui Hogar</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, illum atque nobis in nemo consequatur
-            voluptates excepturi quia natus impedit dignissimos voluptatem quidem pariatur explicabo laboriosam numquam
-            aperiam cumque quae.</p>
-        <form id="revForm">
-            <div class="mb-3">
-                <label for="inpNombre" class="form-label">Nombre y apellido</label>
-                <input type="text" class="form-control" id="inpNombre" aria-describedby="nombre">
-            </div>
-            <div class="mb-3">
-                <label for="inpTelefono" class="form-label">Teléfono de contacto</label>
-                <input type="text" class="form-control" id="inpTelefono">
-            </div>
-            <div class="mb-3">
-                <label for="inpEmail" class="form-label">Correo electrónico</label>
-                <input type="text" class="form-control" id="inpEmail">
-            </div>
-            <div id="containerLocalidad" class="mb-3">
-                <label for="inpLocalidad" class="form-label">Localidad</label>
-                <select id="inpLocalidad">
-                    <option value="1">BUENOS AIRES</option>
-                    <option value="2">CATAMARCA</option>
-                    <option value="5">CHACO</option>
-                    <option value="6">CHUBUT</option>
-                    <option value="50">CIUDAD AUTONOMA DE Bs As</option>
-                    <option value="3">CORDOBA</option>
-                    <option value="4">CORRIENTES</option>
-                    <option value="7">ENTRE RIOS</option>
-                    <option value="8">FORMOSA</option>
-                    <option value="9">JUJUY</option>
-                    <option value="10">LA PAMPA</option>
-                    <option value="11">LA RIOJA</option>
-                    <option value="12">MENDOZA</option>
-                    <option value="13">MISIONES</option>
-                    <option value="14">NEUQUEN</option>
-                    <option value="15">RIO NEGRO</option>
-                    <option value="16">SALTA</option>
-                    <option value="17">SAN LUIS</option>
-                    <option value="19">SANTA CRUZ</option>
-                    <option value="20">SANTA FE</option>
-                    <option value="21">SANTIAGO DEL ESTERO</option>
-                    <option value="22">TIERRA DEL FUEGO</option>
-                </select>
-            </div>
-            <div id="revContbtn">
-                <input class="btn btn-primary" type="submit" value="Enviar">
-                <input class="btn btn-primary" type="reset" value="Reiniciar">
-            </div>
-        </form>
     </main>
 
     <footer id="pie">

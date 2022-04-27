@@ -18,63 +18,66 @@
 </head>
 
 <body id="contBody">
-    <nav id="navegador" class="navbar navbar-expand-lg navbar-dark navegador">
-        <div id="contNav" class="container-fluid">
-            <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">
-                <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
-            </a>
-            <div id="dropNav" class="collapse navbar-collapse">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalogo.html">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="envio.html">Cotización de envío</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="revendedores.html">Ser revendedor</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+    <header>
+        <nav id="navegador" class="navbar navbar-expand-lg navbar-dark navegador">
+            <div id="contNav" class="container-fluid">
+                <button id="hambNav" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#dropNav" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="./img/LOGO.png" alt="Logo de Blanqui Hogar">
+                </a>
+                <div id="dropNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="envio.html">Cotización de envío</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="revendedores.html">Ser revendedor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+    <main>
+        <div id="contCont">
+            <div id="contTexto">
+                <h1>Contactate con Blanqui Hogar</h1>
+                <p>Comprar de forma online a veces puede resultar frustrante. Ante cualquier consulta, no dudes en
+                    escribirnos.</p>
+            </div>
+            <form id="contForm">
+                <div class="mb-3">
+                    <label for="contNombre" class="form-label col-lg-3">Nombre y apellido</label>
+                    <input type="text" class="form-control" id="contNombre" aria-describedby="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="contEmail" class="form-label col-lg-3">Correo electrónico</label>
+                    <input type="text" class="form-control" id="contEmail">
+                </div>
+                <div class="mb-3">
+                    <label for="contConsul" class="form-label col-lg-3">Deja tu consulta</label>
+                    <textarea id="contConsul" name="subject" placeholder="" style="height:100px"></textarea>
+                </div>
+                <div id="contContbtn">
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                    <input class="btn btn-primary" type="reset" value="Reiniciar">
+                </div>
+            </form>
         </div>
-    </nav>
-
-    <div id="contCont">
-        <h1>Contactate con Blanqui Hogar</h1>
-        <p>Comprar de forma online a veces puede resultar frustrante. Ante cualquier consulta, no dudes en
-            escribirnos.</p>
-        <form id="contForm">
-            <div class="mb-3">
-                <label for="contNombre" class="form-label">Nombre y apellido</label>
-                <input type="text" class="form-control" id="contNombre" aria-describedby="nombre">
-            </div>
-            <div class="mb-3">
-                <label for="contEmail" class="form-label">Correo electrónico</label>
-                <input type="text" class="form-control" id="contEmail">
-            </div>
-            <div class="mb-3">
-                <label for="contConsul" class="form-label">Deja tu consulta debajo</label>
-                <textarea id="contConsul" name="subject" placeholder="Nos comunicaremos a la brevedad"
-                    style="height:100px"></textarea>
-            </div>
-            <div id="contContbtn">
-                <input class="btn btn-primary" type="submit" value="Enviar">
-                <input class="btn btn-primary" type="reset" value="Reiniciar">
-            </div>
-        </form>
-    </div>
-
+    </main>
     <footer id="pie" class="pie">
         <div id="contPie">
             <a target="_blank" href="https://whatsapp.com">
