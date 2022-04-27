@@ -16,11 +16,11 @@ $colores: (
 #indBody {
     main {
         #contIndexMain {
-            padding: 5px 5px 81px 5px;
+            padding: 5px 5px 5px 5px;
             flex-wrap: wrap;
             display: flex;
             #contCarrusel {
-                margin: 5px;
+                margin: 5px auto;
                 img {
                     max-height: auto;
                 }
@@ -43,16 +43,19 @@ $colores: (
                 flex-direction: column;
                 align-items: center;
                 padding-right: 20px;
+                h1 {
+                    padding: 30px;
+                }
                 p {
                     font-size: $fontMd;
                     padding: 5px;
                     text-align: justify;
                 }
             }
-            #contMapa {
-                display: none;
-            }
+
             #contBtnMapa {
+                padding: 0px 5px;
+                margin-bottom: 50px;
                 display: block;
                 flex-grow: 1;
                 p {
@@ -68,7 +71,7 @@ $colores: (
                     .card {
                         background-color: map-get($map: $colores, $key: "2");
                         border: 0;
-                        padding: 0;
+                        padding: 0px;
                         iframe {
                             width: 100%;
                         }
@@ -332,65 +335,47 @@ $colores: (
                 flex-wrap: 1;
                 @include contFlex(70%, 0px auto);
                 #contCarrusel {
-                    @include contFlex(70%, 20px auto);
+                    @include contFlex(100%, 20px auto);
                     border: solid 8px #ffffff;
                     border-radius: 20%;
                     overflow: hidden;
                     background-color: map-get($map: $colores, $key: "2");
                     img {
                         border-radius: 17%;
+                        max-height: 1000px;
                     }
                     .descripcion {
                         bottom: 60px;
                     }
                 }
                 #contNosotros {
+                    margin: 50px auto;
+                    width: 100%;
+                    padding: 30px 50px 50px 50px;
+                    border: solid 3px $mainColor;
+                    border-radius: 20px;
+                    background-color: #f7f1f1;
                     flex-grow: 1;
+                    h1 {
+                        padding-bottom: 30px;
+                    }
                 }
-            }
-        }
-    }
-    #envBody {
-        #envCont {
-            @include contFlex(70%, auto);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            h1 {
-                font-size: $fontLg;
-                margin-top: -50px;
-            }
-            #envForm {
-                display: flex;
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-                fieldset {
-                    display: flex;
-                    background-color: rgb(255, 255, 255);
-                    border-radius: 10%;
-                    box-shadow: 1px 1px rgb(0, 0, 0);
-                    padding: 20px;
-                }
-                legend {
-                    font-size: $fontMd;
-                }
-                #envTextarea1 {
-                    border-radius: 3%;
-                    background-color: $secondaryColor;
-                    box-shadow: none;
-                    #envTextarea2 {
-                        width: 95%;
-                        margin: auto;
-                        font-size: 1em;
-                        #aclEnv {
-                            width: 100%;
-                            font-size: 1.5em;
+                #contBtnMapa {
+                    margin: 30px auto 50px auto;
+                    padding: 0px;
+                    flex-grow: 0;
+                    width: 80%;
+                    p {
+                        #botonMaps {
+                            background-color: $mainColor;
+                            flex-grow: 1;
                         }
                     }
                 }
             }
         }
     }
+
     #envBody {
         #envCont {
             @include contFlex(70%, auto);
@@ -505,39 +490,6 @@ $colores: (
                             width: 200px;
                             height: 60px;
                             margin: 0px auto;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    #indBody {
-        main {
-            #contIndexMain {
-                #contBtnMapa {
-                    display: none;
-                }
-                #contMapa {
-                    display: block;
-                    h2 {
-                        font-size: $fontLg;
-                        text-align: center;
-                    }
-                    .containerMapa {
-                        position: relative;
-                        padding-bottom: 100.25%;
-                        height: 0;
-                        overflow: hidden;
-                        border: #615b5b 1px solid;
-                        iframe {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 100%;
                         }
                     }
                 }

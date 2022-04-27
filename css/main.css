@@ -57,11 +57,11 @@ h1 {
   text-align: center; }
 
 #indBody main #contIndexMain {
-  padding: 5px 5px 81px 5px;
+  padding: 5px 5px 5px 5px;
   flex-wrap: wrap;
   display: flex; }
   #indBody main #contIndexMain #contCarrusel {
-    margin: 5px; }
+    margin: 5px auto; }
     #indBody main #contIndexMain #contCarrusel img {
       max-height: auto; }
     #indBody main #contIndexMain #contCarrusel .descripcion {
@@ -79,13 +79,15 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding-right: 20px; }
+    #indBody main #contIndexMain #contNosotros h1 {
+      padding: 30px; }
     #indBody main #contIndexMain #contNosotros p {
       font-size: 2em;
       padding: 5px;
       text-align: justify; }
-  #indBody main #contIndexMain #contMapa {
-    display: none; }
   #indBody main #contIndexMain #contBtnMapa {
+    padding: 0px 5px;
+    margin-bottom: 50px;
     display: block;
     flex-grow: 1; }
     #indBody main #contIndexMain #contBtnMapa p {
@@ -98,7 +100,7 @@ h1 {
     #indBody main #contIndexMain #contBtnMapa #dropMapa .card {
       background-color: #d1d1d1;
       border: 0;
-      padding: 0; }
+      padding: 0px; }
       #indBody main #contIndexMain #contBtnMapa #dropMapa .card iframe {
         width: 100%; }
 
@@ -288,50 +290,35 @@ h1 {
     width: 70%;
     margin: 0px auto; }
     #indBody main #contIndexMain #contCarrusel {
-      width: 70%;
+      width: 100%;
       margin: 20px auto;
       border: solid 8px #ffffff;
       border-radius: 20%;
       overflow: hidden;
       background-color: #d1d1d1; }
       #indBody main #contIndexMain #contCarrusel img {
-        border-radius: 17%; }
+        border-radius: 17%;
+        max-height: 1000px; }
       #indBody main #contIndexMain #contCarrusel .descripcion {
         bottom: 60px; }
     #indBody main #contIndexMain #contNosotros {
+      margin: 50px auto;
+      width: 100%;
+      padding: 30px 50px 50px 50px;
+      border: solid 3px #0f6394;
+      border-radius: 20px;
+      background-color: #f7f1f1;
       flex-grow: 1; }
-  #envBody #envCont {
-    width: 70%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    #envBody #envCont h1 {
-      font-size: 3em;
-      margin-top: -50px; }
-    #envBody #envCont #envForm {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap; }
-      #envBody #envCont #envForm fieldset {
-        display: flex;
-        background-color: white;
-        border-radius: 10%;
-        box-shadow: 1px 1px black;
-        padding: 20px; }
-      #envBody #envCont #envForm legend {
-        font-size: 2em; }
-      #envBody #envCont #envForm #envTextarea1 {
-        border-radius: 3%;
-        background-color: #d1d1d1;
-        box-shadow: none; }
-        #envBody #envCont #envForm #envTextarea1 #envTextarea2 {
-          width: 95%;
-          margin: auto;
-          font-size: 1em; }
-          #envBody #envCont #envForm #envTextarea1 #envTextarea2 #aclEnv {
-            width: 100%;
-            font-size: 1.5em; }
+      #indBody main #contIndexMain #contNosotros h1 {
+        padding-bottom: 30px; }
+    #indBody main #contIndexMain #contBtnMapa {
+      margin: 30px auto 50px auto;
+      padding: 0px;
+      flex-grow: 0;
+      width: 80%; }
+      #indBody main #contIndexMain #contBtnMapa p #botonMaps {
+        background-color: #0f6394;
+        flex-grow: 1; }
   #envBody #envCont {
     width: 70%;
     margin: auto;
@@ -416,24 +403,3 @@ h1 {
         width: 200px;
         height: 60px;
         margin: 0px auto; } }
-
-@media only screen and (min-width: 1200px) {
-  #indBody main #contIndexMain #contBtnMapa {
-    display: none; }
-  #indBody main #contIndexMain #contMapa {
-    display: block; }
-    #indBody main #contIndexMain #contMapa h2 {
-      font-size: 3em;
-      text-align: center; }
-    #indBody main #contIndexMain #contMapa .containerMapa {
-      position: relative;
-      padding-bottom: 100.25%;
-      height: 0;
-      overflow: hidden;
-      border: #615b5b 1px solid; }
-      #indBody main #contIndexMain #contMapa .containerMapa iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; } }
