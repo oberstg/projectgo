@@ -1,0 +1,18 @@
+#navegador {
+    font-size: 2em;
+    background-color: #0f6394; }
+    #navegador #contNav {
+      padding: 0px; }
+    #navegador #hambNav {
+      margin-left: 5px; }
+    #navegador #dropNav {
+      flex-grow: 0;
+      margin-left: 5px; }
+    @media only screen and (min-width: 992px) {
+      #navegador #contNav {
+        width: 70%;
+        margin: 0 auto; }
+      #navegador #dropNav a {
+        font-size: 0.8em;
+        margin: 0px 5px; } }
+  
